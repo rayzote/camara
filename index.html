@@ -18,7 +18,7 @@
 			function (Foto){
 				ruta =Foto[0].fullPath;
 				//colocación de la imágen en la aplicación a través de una etiqueta img
-				$("#contieneImagen").append("<img src="+ruta+"width='100%' />");
+				$("#contieneImagen").append('<img src='+ruta+'width="100%" />').attr('rel',ruta);
 				},function (error){
 				navigator.notification.alert("Error: "+error.code,null,"Captura de error");
 				},{limit:1});
